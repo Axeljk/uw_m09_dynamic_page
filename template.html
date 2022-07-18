@@ -8,21 +8,23 @@
 	<link rel="stylesheet" href="style/style.css">
 </head>
 <body>
-	<header>
-		<h1>Hi, My Name is ${input.userName}</h1>
-		<p>I am from ${input.userLocation}</p>
-	</header>
 	<main>
-		<div id="card">
-			<h2>Bio</h2>
-			<p>${input.userBio}</p>
+		<div class="card" id="contact">
+			<div class="header">
+				<h1>${input.userName}</h1>
+				<p>From ${input.userLocation}</p>
+			</div>
+			<div class="body">
+				<h2>Bio</h2>
+				<p>${input.userBio}</p>
+			</div>
+			<div class="footer">
+				<ul>
+					<li><a href="${input.gitHubUsername}" target="_blank">GitHub</a></li>
+					<li><a href="${input.linkedInUsername}" target="_blank">LinkedIn</a></li>
+				</ul>
+			</div>
 		</div>
 	</main>
-	<footer>
-		<ul>
-			<li><a href="${input.gitHubUsername}" target="_blank">GitHub</a></li>
-			<li><a href="${input.linkedInUsername}" target="_blank">LinkedIn</a></li>
-		</ul>
-	</footer>
 </body>
 </html>

@@ -1,36 +1,86 @@
+:root {
+	--page-color: #efefef;
+	--primary: #aeccc6;
+	--secondary: #9ba6a5;
+	--primary-contrast: #757a79;
+	--secondary-contrast: #bbe9db;
+}
+
 * {
 	margin: 0;
 	padding: 0;
 }
 
 html, body {
-	background: salmon;
+	background: var(--page-color);
 	height: 100%;
-}
-header {
-	background: goldenrod;
-	height: 75px;
-	padding-left: 2em;
+	min-height: 250px;
 }
 main {
 	height: calc(100% - 125px);
 	padding: 0 15%;
+	display: flex;
+	align-items: center;
 }
-footer {
-	background: forestgreen;
-	color: white;
-	height: 50px;
-}
-
 h1, h2 {
 	padding-top: 0.5em;
 	font-size: 1.5em;
 }
 p {
-	text-indent: 0.5em;
 	padding-top: 0.625em;
 }
-header > p {
+ul {
+	display: flex;
+	flex-direction: row;
+	height: 100%;
+	list-style-type: none;
+	justify-content: space-around;
+	align-items: center;
+}
+a {
+	color: inherit;
+	text-decoration: none;
+	font-size: 1.2em;
+}
+
+/* Classes */
+.card {
+	background: #00000033;
+	height: 70%;
+	width: 100%;
+	border-radius: 8px;
+}
+.header {
+	background: var(--secondary);
+	color: var(--secondary-contrast);
+	height: 75px;
+	padding-left: 2em;
+	border-radius: 8px 8px 0 0;
+}
+.header > p {
 	font-size: 0.8em;
-	padding-top: 0.25em;
+	padding-top: 0.5em;
+}
+.body {
+	background: var(--primary);
+	color: var(--primary-contrast);
+	min-height: calc(100% - 125px);
+	padding: 0 2%;
+}
+.body > h2 {
+	text-indent: 2em;
+}
+.body > h2::after {
+	display: block;
+	height: 2px;
+	width: 100px;
+	background: var(--primary-contrast);
+	padding-left: 1.5em;
+	content: "";
+}
+.footer {
+	background: var(--secondary);
+	color: var(--secondary-contrast);
+	height: 50px;
+	border-radius: 0 0 8px 8px;
 }
